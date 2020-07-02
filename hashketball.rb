@@ -184,7 +184,6 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  all_stats = nil 
   game_hash.map do |team, team_attrbiutes|
     team_attributes[:players].map do |player, stats|
       if player == player_name
