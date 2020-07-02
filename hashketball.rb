@@ -198,5 +198,6 @@ def big_shoe_rebounds
   biggest_shoes = 0
   rebounds = 0 
   game_hash.each do |team, team_attributes|
-    team_attributes[:players].each do |
+    team_attributes[:players].each do |player|
+      
 end
