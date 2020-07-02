@@ -183,11 +183,11 @@ def player_numbers(team_name)
   numbers
 end
 
-def player_stats(player_name)
+def player_stats(player)
   game_hash.each do |team, team_attributes|
     team_attributes[:players].each do |player|
       binding.pry
-      if player == player_name
+      if player == player
     end
   end
 end
