@@ -1,3 +1,6 @@
+require './hashketball.rb'
+require 'pry'
+
 # Write your code below game_hash
 def game_hash
   {
@@ -127,3 +130,68 @@ def game_hash
 end
 
 # Write code here
+
+def num_points_scored(player)
+  points_scored = 0
+  game_hash.each do |team, team_attributes|
+    team_attributes[:players].each do |attribute|
+      if attribute[:player_name] == player
+        points_scored = attribute[:points]
+      end
+    end
+  end
+  points_scored
+end
+
+def shoe_size(player)
+  s_size = 0 
+  game_hash.each do |team, team_attributes|
+    team_attributes[:players].each do |attribute|
+      if attribute[:player_name] == player
+        s_size = attribute[:shoe]
+      end
+    end
+  end
+  s_size
+end
+
+def team_colors(team_name)
+  colors = nil
+  game_hash.map do |team, team_attributes|
+    if team_attributes[:team_name] == team_name
+      colors = team_attributes[:colors]
+    end
+  end
+  colors
+end
+
+def team_names
+  game_hash.map do |team, team_attributes|
+    team_attributes[:team_name]
+  end
+end
+
+def player_numbers(team_name)
+  numbers = []
+  game_hash.map do |team, team_attributes|
+    if team_attributes[:team_name] == team_name
+      team_attributes[:players].map do |player, stats|
+        numbers << player[:number]
+      end
+    end
+  end
+  numbers
+end
+
+def player_stats(player_name)
+  all_stats = nil 
+  game_hash.map do |team, team_attrbiutes|
+    team_attributes[:players].map do |player, stats|
+        binding.pry
+      if player == player_name
+        all_stats = stats
+      end
+    end
+  end
+  all_stats
+end
