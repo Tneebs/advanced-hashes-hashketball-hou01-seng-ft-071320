@@ -186,9 +186,7 @@ end
 def player_stats(player)
   game_hash.each do |team, team_attributes|
     team_attributes[:players].each do |players_name|
-      binding.pry
-      if players_name == player
-    end
+      return game_hash[]
   end
 end
 end
