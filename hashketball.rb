@@ -190,7 +190,7 @@ def player_stats(player_name)
       if player == player_name
         all_stats = stats
       end
-      all_stats
     end
   end
+  all_stats
 end
