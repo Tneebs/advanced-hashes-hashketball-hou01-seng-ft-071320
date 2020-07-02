@@ -187,7 +187,7 @@ def player_stats(player_name)
   game_hash.each do |team, team_attrbiutes|
     team_attributes[:players].each do |player|
       if player == player_name
-        return game_hash[]
+        return game_hash[team]
     end
   end
 end
