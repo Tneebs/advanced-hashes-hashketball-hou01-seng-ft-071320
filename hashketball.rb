@@ -201,5 +201,6 @@ def big_shoe_rebounds
     team_attributes[:players].each do |player|
       size = player[:shoe]
       if size > biggest_shoes
+        biggest_shoes = size
         
 end
